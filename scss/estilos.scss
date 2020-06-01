@@ -1,0 +1,68 @@
+// -------------------------
+//     PATRON DE COLORES
+// -------------------------
+$principal:rgb(243, 93, 93);
+$texto:#44484a;
+
+
+/* --------------------------------------------
+    SOBREESCRIBIENDO LOS ESTILOS DE BOOTSTRAP
+-------------------------------------------- */
+// Para sobreescribir el color primary, por ejemplo
+.bg-primary {
+    background-color: $principal !important;
+}
+
+.text-primary {
+    color: $principal !important;
+}
+
+.btn-primary {
+    background-color: $principal !important;
+    border-color:  darken($principal, 20%)!important;
+}
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: darken($principal, 8%) !important;
+}
+
+.btn-primary:active {
+    background-color: darken($principal, 20%) !important;
+    border-color:  darken($principal, 30%)!important;
+}
+
+.btn-primary:focus {
+    box-shadow: 0 0 0 0.2rem rgba($color: $principal, $alpha: .5);
+}
+
+/* -------------------------
+    ESTILOS DEL DISEÑO
+------------------------- */
+// se aplica a todos los hijos de "servicios"
+// .servicios>* { } 
+// se aplica solo a "servicios", al padre, no a sus hijos.
+// .servicios {}
+
+html {
+    font-size: 13px;
+}
+body{
+    color: $texto;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.card:hover {
+    box-shadow: 0 0 10px #0c0c0c3b;
+}
+
+
+
+/* -------------------------
+    MEDIAS QUERIES
+------------------------- */
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
